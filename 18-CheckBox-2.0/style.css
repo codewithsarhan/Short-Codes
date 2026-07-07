@@ -1,0 +1,92 @@
+body{
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    
+}
+
+
+
+
+.uiverse-pixel-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  font-size: 1em;
+  
+  color: #000000;
+  cursor: pointer;
+  user-select: none;
+}
+
+.uiverse-pixel-checkbox-input {
+  appearance: none;
+  margin: 0;
+  width: 1.5em;
+  height: 1.5em;
+  background: #ffffff;
+  image-rendering: pixelated;
+  position: relative;
+  border: none;
+  box-shadow:
+    0 0 0 0.15em #000000,
+    0 0 0 0.3em #ffffff,
+    0 0 0 0.45em #000000,
+    0 0.4em 0 0 #ffffff,
+    0 0.4em 0 0.1em #616161;
+  transition: background 0.2s steps(1);
+}
+
+.uiverse-pixel-checkbox-input:checked {
+  background: #2bff00;
+}
+
+.uiverse-pixel-checkbox-input:checked::after {
+  content: "✓";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1.1em;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 1px 1px #fff;
+}
+
+.uiverse-pixel-checkbox-input:hover {
+  background: #00ccff;
+  animation: uiverse-glitch 0.3s steps(2) infinite;
+}
+
+.uiverse-pixel-checkbox-input:focus-visible {
+  outline: 2px dashed #fff;
+  outline-offset: 0.2em;
+}
+
+.uiverse-pixel-checkbox-label {
+  pointer-events: none;
+}
+
+@keyframes uiverse-glitch {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(3px, -3px);
+  }
+  60% {
+    transform: translate(-2px, -2px);
+  }
+  80% {
+    transform: translate(2px, 2px);
+  }
+  100% {
+    transform: translate(1, 1);
+  }
+}
