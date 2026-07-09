@@ -1,8 +1,11 @@
 body{
-
-    text-align: center;
-    margin-top: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    margin: 0%;
 }
+
 
 .theme-switch {
   --toggle-size: 32px;
