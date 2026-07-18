@@ -1,0 +1,150 @@
+/* Base Page Setup */
+body {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+    margin: 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+    box-sizing: border-box;
+}
+
+#wrapper-main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Main Box Container */
+#container {
+    min-height: 500px;
+    width: 100%;
+    max-width: 800px; /* Desktop par max 800px wide rahega */
+    background-color: rgba(128, 128, 128, 0.265);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+/* Responsive Navbar */
+#navSec {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Links aur elements automatically balanced rahenge */
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+#logoImg {
+    height: 40px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.links {
+    text-decoration: none;
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+#bookBtn {
+    border: none;
+    font-size: 11px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.885);
+}
+
+/* Flexbox Grid for Content Layout */
+.content-layout {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px 20px 40px;
+    flex-grow: 1;
+    gap: 20px;
+}
+
+/* Left Content Area */
+.left-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 350px;
+}
+
+#headline {
+    font-size: clamp(28px, 4vw, 45px); /* Choti screen par khud chota ho jayega */
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.headlineDf {
+    font-size: clamp(32px, 4.5vw, 50px);
+    color: rgb(2, 2, 255);
+}
+
+#discripiton {
+    width: 100%;
+    max-width: 300px;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+/* Right Content Area (Card) */
+.right-content {
+    display: flex;
+    align-items: flex-start;
+}
+
+.card {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* --- Media Queries for Tablets and Mobile Screens --- */
+@media (max-width: 768px) {
+    #navSec {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .content-layout {
+        flex-direction: column; /* Desktop ka side-by-side layout ab upar-neeche ho jayega */
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .left-content {
+        max-width: 100%;
+        align-items: center;
+    }
+
+    #discripiton {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+}
