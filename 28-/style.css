@@ -1,0 +1,129 @@
+body {
+    background-color: #030303;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+    width: 100%;
+    max-width: 750px; /* Aapke 700px width ko responsive banaya */
+    min-height: 450px;
+    background-color: #f1f3f32b;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar responsive setup */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Logo aur Text ke beech ka faasla */
+    margin-bottom: 30px;
+}
+
+#infinity-logo {
+    height: 40px;
+    width: auto;
+    position: absolute;
+    margin-right: 110px;
+}
+
+.links {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Main Content Wrapper: Image aur Text ko barabar banta hai */
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Choti screen par niche shift hone ke liye */
+    gap: 20px;
+    flex-grow: 1;
+}
+
+#image4 {
+    height: auto;
+    max-height: 250px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Tagline Container */
+#tagLine {
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#firstWr {
+    font-size: 45px;
+    font-weight: 700;
+    color: rgb(251, 255, 0);
+    margin: 0;
+}
+
+#secWrd {
+    font-size: 55px;
+    font-weight: 800;
+    color: rgb(246, 246, 242);
+    margin: 0;
+}
+
+#thirWrd {
+    font-size: 50px;
+    font-weight: 700;
+    color: rgb(0, 123, 255);
+    margin: 0;
+    margin-bottom: 20px; /* Button se door rakhne ke liye */
+}
+
+/* Naye Button ka design */
+.custom-btn {
+    background-color: rgb(0, 123, 255);
+    color: white;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 8px;
+    border: none;
+    align-self: flex-start; /* Button ko left align rakhne ke liye */
+    transition: background 0.3s ease;
+}
+
+.custom-btn:hover {
+    background-color: rgb(0, 86, 179);
+    color: white;
+}
+
+/* Media Query: Mobile screen ke liye adjustments */
+@media (max-width: 576px) {
+    .content-wrapper {
+        flex-direction: column; /* Mobile par image upar aur text niche aayega */
+        text-align: center;
+    }
+    
+    #tagLine {
+        align-items: center; /* Mobile par text center karne ke liye */
+    }
+    
+    .custom-btn {
+        align-self: center; /* Mobile par button center ho jayega */
+    }
+
+    #firstWr { font-size: 35px; }
+    #secWrd { font-size: 45px; }
+    #thirWrd { font-size: 40px; }
+}
