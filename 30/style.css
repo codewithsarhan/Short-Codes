@@ -1,0 +1,109 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 15, 76);
+    min-height: 100vh; /* 100vh center karne ke liye behtar hai */
+    margin: 0;
+}
+
+#container {
+    height: 400px;
+    width: 700px;
+    background-color: rgba(245, 247, 247, 0.032);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; /* Image ko container se bahar nikalne se rokta hai */
+    padding: 10px;
+}
+
+#navBar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Brand name left, links right */
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+margin-right: 30px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 70px; /* Links ke beech spacing */
+}
+
+.links {
+    text-decoration: none;
+    color: rgb(250, 250, 250);
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Image styling */
+#img1{
+
+    height: 300px;
+    position: absolute;
+    margin-right: 475px;
+    margin-top: 100px;
+
+}
+
+
+#tagLine1{
+
+color: white;
+font-size: 40px;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 600;
+word-spacing: 10px;
+text-align: justify;
+letter-spacing: 1px;
+position: relative;
+left: 100px;
+top: 60px;
+
+}
+
+#exploreBtn{
+
+position: relative;
+top: 50px;
+left: 100px;
+font-size: 12px;
+height: 30px;
+width: 100px;
+border-radius: 2px;
+background-color: rgb(0, 0, 0);
+transition: 1s;
+color: white;
+border: 2px solid rgb(0, 238, 255);
+text-align: center;
+
+
+}
+
+#exploreBtn:hover{
+
+    background-color: rgb(0, 106, 255);
+}
+
+#tags1{
+
+color: yellow;
+
+}
+
+#tags2{
+    color: aqua;
+}
+
+#tags3{
+
+color: rgb(199, 9, 9);
+
+}
